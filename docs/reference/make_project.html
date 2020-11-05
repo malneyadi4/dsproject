@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create A New Project — make_project • dsproject</title>
+<title>create a project — make_project • dsproject</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Create A New Project — make_project" />
-<meta property="og:description" content="make_project will create a new project" />
+<meta property="og:title" content="create a project — make_project" />
+<meta property="og:description" content="Creates a new project and sets up all of the relevant directories and their initial contents." />
 
 
 
@@ -111,13 +111,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create A New Project</h1>
+    <h1>create a project</h1>
     <small class="dont-index">Source: <a href='https://github.com/malneyadi/dsproject/blob/master/R/make_project.R'><code>R/make_project.R</code></a></small>
     <div class="hidden name"><code>make_project.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>make_project will create a new project</p>
+    <p>Creates a new project and sets up all of the relevant directories and their initial contents.</p>
     </div>
 
     <pre class="usage"><span class='fu'>make_project</span><span class='op'>(</span>
@@ -133,33 +133,46 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>project</th>
-      <td><p>A character vector containing the name for this new project.</p></td>
+      <td><p>A character string containing the name for this new project.</p></td>
     </tr>
     <tr>
       <th>path</th>
-      <td><p>Set the path of the new project to the current directory.</p></td>
+      <td><p>An optional character string containing the path for this new project. By default, the path is set to the current directory.</p></td>
     </tr>
     <tr>
       <th>folders</th>
-      <td><p>Set the names of the subdirectories in the new project.</p></td>
+      <td><p>An optional character vector containing the names of the subdirectories. By default, the project will contain only five subdirectories with default names.</p></td>
     </tr>
     <tr>
       <th>readme</th>
-      <td><p>Set the name and format of the readme file in the new project.</p></td>
+      <td><p>An optional character string containing the name of the readme file. By default, the name of the readme file will be "README.md".</p></td>
     </tr>
     <tr>
       <th>git</th>
-      <td><p>Add git if true.</p></td>
+      <td><p>An optional boolean value indicating whether the project files should be committed to Github (<code>TRUE</code>) or not (<code>FALSE</code>). Default is <code>FALSE</code>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a project</p>
+    <p>No value is returned (this function is called for its side effects.)</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function creates a new project and sets up all of the relevant directories and their initial contents. If the path of
+the project is not specified, the path will be set to the current directory. The default behavior is to add 5 essential
+subdirectories, but it is also possible to specify or add your own subdirectories. <code>make_project</code> also creates
+a readme file called "README.md" by default. You can specify the name of the readme file. The project files
+will be commited to Github if <code>git = TRUE</code>, however, the default is <code>FALSE</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='fu'>make_project</span><span class='op'>(</span><span class='st'>"firstproject"</span><span class='op'>)</span>
+<span class='fu'>make_project</span><span class='op'>(</span><span class='st'>"newproject"</span><span class='op'>)</span>
+
+<span class='co'># provide a custom path for the project.</span>
+<span class='fu'>make_project</span><span class='op'>(</span><span class='st'>"newproject"</span>, path <span class='op'>=</span> <span class='st'>"path/to/new-project"</span><span class='op'>)</span>
+
+<span class='co'># automatically commit the new project files to Github</span>
+
 <span class='fu'>make_project</span><span class='op'>(</span><span class='st'>"secondproject"</span>, git <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='op'>}</span>
 </div></pre>

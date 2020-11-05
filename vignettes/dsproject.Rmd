@@ -16,8 +16,19 @@ knitr::opts_chunk$set(
 
 # Introduction 
 
-Here is an article on using the `dsproject` package.
+The goal of `dsproject` is to provide a fast and friendly way to import a file as a dataframe, create a new project, and install and load a package. The function, responsible for importing a file, supports a variety of file formats, which makes it convenient to import a file. The function, responsible for creating a project, allows you to set up all of the project's subdirectories and the initial contents. Lastly, the function, responsible for installing and loading a package, allows you to first check whether the package is installed or not, and to install the package and then load it, if it wasn't not installed.
+
+## Installation
 
 ```{r setup,eval=FALSE}
+# Run the code below to install the devtools package if it is not already installed
+if(!require(devtools)){
+  install.packages("devtools")
+}
+
+# Install the dsproject package from Github
+devtools::install_github("malneyadi4/dsproject")
+
+# Load the dsproject package
 library(dsproject)
 ```

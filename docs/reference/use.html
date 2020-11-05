@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Use a package — use • dsproject</title>
+<title>check, install and load a package — use • dsproject</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,11 @@
 
 
 
-<meta property="og:title" content="Use a package — use" />
-<meta property="og:description" content="FUNCTION_DESCRIPTION" />
+<meta property="og:title" content="check, install and load a package — use" />
+<meta property="og:description" content="Checks the local R libraries to see if the required package is installed or not.
+If the package is not installed, the user will be prompted to choose whether to
+install the package or not. If the user chose to install the package,
+it will be first installed and then loaded." />
 
 
 
@@ -111,13 +114,16 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Use a package</h1>
+    <h1>check, install and load a package</h1>
     <small class="dont-index">Source: <a href='https://github.com/malneyadi/dsproject/blob/master/R/use.R'><code>R/use.R</code></a></small>
     <div class="hidden name"><code>use.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>FUNCTION_DESCRIPTION</p>
+    <p>Checks the local R libraries to see if the required package is installed or not.
+If the package is not installed, the user will be prompted to choose whether to
+install the package or not. If the user chose to install the package,
+it will be first installed and then loaded.</p>
     </div>
 
     <pre class="usage"><span class='fu'>use</span><span class='op'>(</span><span class='va'>pkg</span><span class='op'>)</span></pre>
@@ -127,13 +133,19 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>pkg</th>
-      <td><p>A vector containing the name for a package.</p></td>
+      <td><p>the name of a package, given as a name or a character string.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>the input object is returned silently</p>
+    <p>the input object (attached package) is returned invisibly</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function checks the local R libraries to see if the required package is installed or not.
+If the package is not installed, then the user will be prompted to choose whether to
+install the package or not. If the user said yes, the package will be installed along with
+the required dependencies. After that, the package will be loaded.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>

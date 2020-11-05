@@ -1,12 +1,12 @@
 Package: dsproject
-Title: Import a dataframe, create a new project, and install a package.
+Title: Import a file as a dataframe, create a new project, and install and load a package.
 Version: 1.0
 Authors@R: 
     person(given = "Mohammed",
            family = "Alneyadi",
            role = c("aut", "cre"),
            email = "malneyadi@wesleyan.edu")
-Description: This package allows you to import a dataframe, create a new project, and install a package.
+Description: This package allows you to import a file as a dataframe, create a new project, and install and load a package.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

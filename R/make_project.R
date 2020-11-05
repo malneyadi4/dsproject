@@ -1,20 +1,33 @@
-#' Create A New Project
+#' @title create a project
+#' @description
+#' Creates a new project and sets up all of the relevant directories and their initial contents.
 #'
-#' make_project will create a new project
+#' @param project A character string containing the name for this new project.
+#' @param path An optional character string containing the path for this new project. By default, the path is set to the current directory.
+#' @param folders An optional character vector containing the names of the subdirectories. By default, the project will contain only five subdirectories with default names.
+#' @param readme An optional character string containing the name of the readme file. By default, the name of the readme file will be "README.md".
+#' @param git An optional boolean value indicating whether the project files should be committed to Github (\code{TRUE}) or not (\code{FALSE}). Default is \code{FALSE}.
 #'
-#' @param project A character vector containing the name for this new project.
-#' @param path Set the path of the new project to the current directory.
-#' @param folders Set the names of the subdirectories in the new project.
-#' @param readme Set the name and format of the readme file in the new project.
-#' @param git Add git if true.
+#' @details
+#' This function creates a new project and sets up all of the relevant directories and their initial contents. If the path of
+#' the project is not specified, the path will be set to the current directory. The default behavior is to add 5 essential
+#' subdirectories, but it is also possible to specify or add your own subdirectories. \code{make_project} also creates
+#' a readme file called "README.md" by default. You can specify the name of the readme file. The project files
+#' will be commited to Github if \code{git = TRUE}, however, the default is \code{FALSE}.
 #'
-#' @export
+#' @return No value is returned (this function is called for its side effects.)
 #' @import usethis
+#' @export
 #'
-#' @return a project
 #' @examples
 #' \dontrun{
-#' make_project("firstproject")
+#' make_project("newproject")
+#'
+#' # provide a custom path for the project.
+#' make_project("newproject", path = "path/to/new-project")
+#'
+#' # automatically commit the new project files to Github
+#'
 #' make_project("secondproject", git = TRUE)
 #'}
 make_project <- function (project,

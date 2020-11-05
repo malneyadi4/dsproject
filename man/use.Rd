@@ -2,18 +2,27 @@
 % Please edit documentation in R/use.R
 \name{use}
 \alias{use}
-\title{Use a package}
+\title{check, install and load a package}
 \usage{
 use(pkg)
 }
 \arguments{
-\item{pkg}{A vector containing the name for a package.}
+\item{pkg}{the name of a package, given as a name or a character string.}
 }
 \value{
-the input object is returned silently
+the input object (attached package) is returned invisibly
 }
 \description{
-FUNCTION_DESCRIPTION
+Checks the local R libraries to see if the required package is installed or not.
+If the package is not installed, the user will be prompted to choose whether to
+install the package or not. If the user chose to install the package,
+it will be first installed and then loaded.
+}
+\details{
+This function checks the local R libraries to see if the required package is installed or not.
+If the package is not installed, then the user will be prompted to choose whether to
+install the package or not. If the user said yes, the package will be installed along with
+the required dependencies. After that, the package will be loaded.
 }
 \examples{
 \dontrun{
