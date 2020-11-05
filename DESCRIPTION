@@ -1,0 +1,25 @@
+Package: dsproject
+Title: Import a dataframe, create a new project, and install a package.
+Version: 1.0
+Authors@R: 
+    person(given = "Mohammed",
+           family = "Alneyadi",
+           role = c("aut", "cre"),
+           email = "malneyadi@wesleyan.edu")
+Description: This package allows you to import a dataframe, create a new project, and install a package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+BugReports: https://github.com/malneyadi/dsproject/issues
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    usethis,
+    vroom,
+    haven,
+    readxl,
+    tools
